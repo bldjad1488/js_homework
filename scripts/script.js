@@ -72,12 +72,6 @@ function priceCalculation(elem) {
         } 
     });
 
-    if (adaptCheckBox.checked) {
-        mobileTemplatesCheckBox.disabled = false; 
-    } else {
-        mobileTemplatesCheckBox.disabled = true; 
-    }
-
     result += DATA.price[index];
 
     totalPriceSum.textContent = result;     
@@ -92,6 +86,12 @@ function handlerCallBackForm(event) {
 
     if (target.classList.contains('calc-handler')) {
         priceCalculation(target);
+    }
+
+    if (adaptCheckBox.checked) {
+        mobileTemplatesCheckBox.disabled = false; 
+    } else {
+        mobileTemplatesCheckBox.disabled = true; 
     }
 }
 
